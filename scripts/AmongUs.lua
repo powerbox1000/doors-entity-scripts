@@ -6,11 +6,10 @@ local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = Spawner.createEntity({
     CustomName = "Among Us Impostor",
-    Model = "https://github.com/powerbox1000/doors-entity-storage/blob/main/models/AmongUs.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
-    Speed = 200,
+    Model = "https://github.com/powerbox1000/doors-entity-storage/blob/main/models/AmongUs.rbxm?raw=true",
     MoveDelay = 2,
     HeightOffset = 0,
-    CanKill = false,
+    CanKill = true,
     KillRange = 50,
     SpawnInFront = false,
     ShatterLights = false,
@@ -32,7 +31,9 @@ local entity = Spawner.createEntity({
     ResistCrucifix = false,
     BreakCrucifix = true,
     DeathMessage = {
-        "You died to who you call the Among Us Impostor.",
+        "You died to who you call the Among Us Impostor",
+        "It likes to spawn around door 69",
+        "Be on the lookout for it's sussyness"
     },
     IsCuriousLight = false
 })
