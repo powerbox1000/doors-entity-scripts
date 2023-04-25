@@ -6,14 +6,14 @@ local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = Spawner.createEntity({
     CustomName = "Among Us Impostor",
-    Model = "https://github.com/powerbox1000/doors-entity-scripts/blob/main/models/AmongUs.rbxm?raw=true",
-    Speed = 150,
+    Model = "https://github.com/powerbox1000/doors-entity-storage/blob/main/models/AmongUs.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
+    Speed = 200,
     MoveDelay = 2,
     HeightOffset = 0,
-    CanKill = true,
+    CanKill = false,
     KillRange = 50,
     SpawnInFront = false,
-    ShatterLights = true,
+    ShatterLights = false,
     FlickerLights = {
         Enabled = true,
         Duration = 1
@@ -28,14 +28,23 @@ local entity = Spawner.createEntity({
         Values = {1.5, 20, 0.1, 1},
         Range = 100
     },
+    
     ResistCrucifix = false,
     BreakCrucifix = true,
     DeathMessage = {
-      "You died to who you call the Among Us Impostor",
+        "You died to who you call the Among Us Impostor.",
     },
     IsCuriousLight = false
 })
 
----====== Run entity ======---
-
 Spawner.runEntity(entity)
+
+local sound = Instance.new("Sound")
+sound.Parent = workspace:WaitForChild("Among Us Impostor")
+sound.SoundId = "rbxassetid://5799014146"
+sound.Looped = true
+sound.RollOffMaxDistance = 10000
+sound.RollOffMaxDistance = 10
+sound.EmitterSize = 100000
+sound.Volume = 1
+sound:Play()
